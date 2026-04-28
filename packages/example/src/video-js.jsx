@@ -1,16 +1,16 @@
 import {Composition} from 'remotion';
-import {Framer} from './FramerJs';
+import {Main as HuaweiVsNvidiaMain} from './HuaweiVsNvidia/Main';
 
 export const Index = () => {
 	return (
 		<>
 			<Composition
-				id="framer"
-				component={Framer}
+				id="huawei-vs-nvidia"
+				component={HuaweiVsNvidiaMain}
 				width={1080}
-				height={1080}
-				fps={30}
-				durationInFrames={100}
+				height={1920}
+				fps={60}
+				durationInFrames={4800}
 			/>
 		</>
 	);

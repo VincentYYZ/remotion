@@ -173,6 +173,12 @@ import {FastUpdates} from './VisualModeTests/FastUpdates';
 import {FastUpdatesNested} from './VisualModeTests/FastUpdatesNested';
 import {VoiceVisualization} from './voice-visualization';
 import {WhisperWeb} from './WhisperWeb';
+import {WindsurfLinuxUpdate} from './WindsurfLinuxUpdate';
+import {Main as HuaweiVsNvidiaMain} from './HuaweiVsNvidia/Main';
+import {MorphCircleTransition} from './MorphCircleTransition';
+import {SlidePushTransition} from './SlidePushTransition';
+import {MinimalFadeIntro} from './MinimalFadeIntro';
+import {CinematicTextIntro} from './CinematicTextIntro';
 
 class Vector2 {
 	readonly x: number;
@@ -615,8 +621,48 @@ export const Index: React.FC = () => {
 				</Folder>
 			</Folder>
 			<Folder name="creatives">
-				<Composition
-					id="drop-dots"
+ 				<Composition
+ 					id="CinematicTextIntro"
+ 					component={CinematicTextIntro}
+ 					width={1920}
+ 					height={1080}
+ 					fps={30}
+ 					durationInFrames={180}
+ 				/>
+ 				<Composition
+ 					id="MinimalFadeIntro"
+ 					component={MinimalFadeIntro}
+ 					width={1920}
+ 					height={1080}
+ 					fps={30}
+ 					durationInFrames={150}
+ 				/>
+ 				<Composition
+ 					id="SlidePushTransition"
+ 					component={SlidePushTransition}
+ 					width={1920}
+ 					height={1080}
+ 					fps={30}
+ 					durationInFrames={90}
+ 				/>
+ 				<Composition
+ 					id="MorphCircleTransition"
+ 					component={MorphCircleTransition}
+ 					width={1920}
+ 					height={1080}
+ 					fps={30}
+ 					durationInFrames={90}
+ 				/>
+ 				<Composition
+ 					id="HuaweiVsNvidia"
+ 					component={HuaweiVsNvidiaMain}
+ 					width={1080}
+ 					height={1920}
+ 					fps={60}
+ 					durationInFrames={4800}
+ 				/>
+ 				<Composition
+ 					id="drop-dots"
 					lazyComponent={() => import('./DropDots/DropDots')}
 					width={1080}
 					height={1080}
@@ -1957,6 +2003,14 @@ export const Index: React.FC = () => {
 				height={720}
 				fps={30}
 				durationInFrames={2 * 60 * 30}
+			/>
+			<Composition
+				id="windsurf-linux-update"
+				component={WindsurfLinuxUpdate}
+				width={1280}
+				height={720}
+				fps={30}
+				durationInFrames={150}
 			/>
 		</>
 	);

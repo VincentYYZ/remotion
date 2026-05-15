@@ -97,6 +97,7 @@ import {ThreeHtml} from './ThreeHtml/ThreeHtml';
 import {VideoTextureDemo} from './ThreeScene/Scene';
 import {Timeout} from './Timeout';
 import {FitText, fitTextSchema} from './Title/FitText';
+import {AiWar} from './AiWar/AiWar';
 import {AudioTransition} from './Transitions/AudioTransition';
 import {BasicTransition} from './Transitions/BasicTransition';
 import {CustomTransition} from './Transitions/CustomTransition';
@@ -2011,6 +2012,14 @@ export const Index: React.FC = () => {
 				height={720}
 				fps={30}
 				durationInFrames={150}
+			/>
+			<Composition
+				id="ai-war"
+				component={AiWar}
+				width={1920}
+				height={1080}
+				fps={30}
+				durationInFrames={300}
 			/>
 		</>
 	);

@@ -38,10 +38,20 @@ export const TechPopup: React.FC<{
 				zIndex: 10,
 			}}
 		>
-			<h2 style={{margin: 0, color, fontSize: '56px', fontWeight: 'bold', textShadow: `0 0 10px ${color}`}}>
+			<h2
+				style={{
+					margin: 0,
+					color,
+					fontSize: '56px',
+					fontWeight: 'bold',
+					textShadow: `0 0 10px ${color}`,
+				}}
+			>
 				{title}
 			</h2>
-			<p style={{margin: 0, fontSize: '40px', lineHeight: '1.5', color: '#fff'}}>
+			<p
+				style={{margin: 0, fontSize: '40px', lineHeight: '1.5', color: '#fff'}}
+			>
 				{desc}
 			</p>
 		</div>

@@ -286,7 +286,9 @@ const TypewriterText: React.FC<{
 		<div style={{...style, whiteSpace: 'pre-wrap'}}>
 			{displayText}
 			{charsToShow < text.length && charsToShow > 0 && (
-				<span style={{opacity: Math.floor(frame / 15) % 2 === 0 ? 1 : 0}}>▎</span>
+				<span style={{opacity: Math.floor(frame / 15) % 2 === 0 ? 1 : 0}}>
+					▎
+				</span>
 			)}
 		</div>
 	);
@@ -403,9 +405,7 @@ const DrawArrow: React.FC<{
 
 // ---- Element Renderer ----
 
-const RenderElement: React.FC<{element: ScriptElement}> = ({
-	element,
-}) => {
+const RenderElement: React.FC<{element: ScriptElement}> = ({element}) => {
 	const delay = 15; // default element entrance delay within scene
 
 	switch (element.type) {
@@ -420,7 +420,8 @@ const RenderElement: React.FC<{element: ScriptElement}> = ({
 				fontSize: element.fontSize || 36,
 				color: element.color || '#333',
 				fontWeight: element.fontWeight || 400,
-				textAlign: (element.textAlign as React.CSSProperties['textAlign']) || 'center',
+				textAlign:
+					(element.textAlign as React.CSSProperties['textAlign']) || 'center',
 				fontFamily: 'system-ui, sans-serif',
 				maxWidth: 900,
 			};
@@ -521,16 +522,9 @@ export const MarkdownVideo: React.FC<{readonly script: string}> = ({
 	return (
 		<AbsoluteFill style={{backgroundColor: parsed.background}}>
 			{parsed.scenes.map((scene, i) => (
-				<Sequence
-					key={i}
-					from={scene.start}
-					durationInFrames={scene.duration}
-				>
+				<Sequence key={i} from={scene.start} durationInFrames={scene.duration}>
 					{scene.elements.map((element, j) => (
-						<RenderElement
-							key={j}
-							element={element}
-						/>
+						<RenderElement key={j} element={element} />
 					))}
 				</Sequence>
 			))}

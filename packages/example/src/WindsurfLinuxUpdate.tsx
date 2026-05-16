@@ -219,8 +219,8 @@ export const WindsurfLinuxUpdate: React.FC = () => {
 						}),
 					}}
 				>
-					Using a non-debian-based distribution? You can download the source tarball{' '}
-					<span style={{color: '#4d79ff'}}>here.</span>
+					Using a non-debian-based distribution? You can download the source
+					tarball <span style={{color: '#4d79ff'}}>here.</span>
 				</div>
 			</div>
 		</AbsoluteFill>

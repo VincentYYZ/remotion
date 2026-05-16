@@ -18,7 +18,7 @@ export const Main: React.FC = () => {
 
 	return (
 		<AbsoluteFill style={{backgroundColor: '#000'}}>
-			<Sequence  durationInFrames={300} name="Sequence 1">
+			<Sequence durationInFrames={300} name="Sequence 1">
 				<Sequence1 />
 			</Sequence>
 

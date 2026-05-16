@@ -11,6 +11,6 @@ registerAc3Encoder();
 // Should be able to defer registerRoot()
 (async () => {
 	//	await loadSkia();
-	const {Index} = await import('./Root');
+	const {Index} = await import('./OutRoot');
 	registerRoot(Index);
 })();

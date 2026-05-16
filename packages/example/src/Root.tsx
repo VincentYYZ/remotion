@@ -126,12 +126,16 @@ import {ThreeDSvgContent} from './3DSvgContent';
 import {AnimatedImages} from './AnimatedImage/Avif';
 import Amplify from './AudioTesting/Amplify';
 import {BrowserTest} from './BrowserTest';
+import {CinematicTextIntro} from './CinematicTextIntro';
 import {EdgeBlur} from './EdgeBlur/EdgeBlur';
 import {Empty} from './Empty';
+import {Main as HuaweiVsNvidiaMain} from './HuaweiVsNvidia/Main';
 import {JumpCuts, SAMPLE_SECTIONS, calculateMetadataJumpCuts} from './JumpCuts';
 import {LightLeakExample} from './LightLeak';
 import {LightLeakAnimatedSize} from './LightLeak/AnimatedSize';
 import {LoopDisplayTestComp} from './LoopDisplayTest';
+import {MinimalFadeIntro} from './MinimalFadeIntro';
+import {MorphCircleTransition} from './MorphCircleTransition';
 import {NewAudioExample} from './NewAudio/NewAudio';
 import {NewVideoComp} from './NewVideo';
 import {ObjectFitTestComp} from './ObjectFitTest';
@@ -150,10 +154,12 @@ import {
 import {PremountOnTransitionSeries} from './PremountOnTransitionSeries';
 import {PrintProps} from './PrintProps';
 import {SfxExample} from './Sfx';
+import {SlidePushTransition} from './SlidePushTransition';
 import {SmoothTextTransition} from './SmoothTextTransition';
 import {SpringSeason} from './SpringSeason';
 import {StarburstExample} from './Starburst';
 import {Seek} from './StudioApis/Seek';
+import {TaipeiCardsScene} from './TaipeiCardsIntro';
 import {TikTokTextBoxPlayground} from './TikTokTextbox/TikTokTextBox';
 import {FitTextOnNLines, fitTextOnNLinesSchema} from './Title/FitTextOnNLines';
 import {TransitionRounding} from './TransitionRounding';
@@ -172,13 +178,9 @@ import {VisualControls} from './VisualControls';
 import {FastUpdates} from './VisualModeTests/FastUpdates';
 import {FastUpdatesNested} from './VisualModeTests/FastUpdatesNested';
 import {VoiceVisualization} from './voice-visualization';
+import {VSCodeCodingScene} from './VSCodeCodingIntro';
 import {WhisperWeb} from './WhisperWeb';
 import {WindsurfLinuxUpdate} from './WindsurfLinuxUpdate';
-import {Main as HuaweiVsNvidiaMain} from './HuaweiVsNvidia/Main';
-import {MorphCircleTransition} from './MorphCircleTransition';
-import {SlidePushTransition} from './SlidePushTransition';
-import {MinimalFadeIntro} from './MinimalFadeIntro';
-import {CinematicTextIntro} from './CinematicTextIntro';
 
 class Vector2 {
 	readonly x: number;
@@ -621,48 +623,48 @@ export const Index: React.FC = () => {
 				</Folder>
 			</Folder>
 			<Folder name="creatives">
- 				<Composition
- 					id="CinematicTextIntro"
- 					component={CinematicTextIntro}
- 					width={1920}
- 					height={1080}
- 					fps={30}
- 					durationInFrames={180}
- 				/>
- 				<Composition
- 					id="MinimalFadeIntro"
- 					component={MinimalFadeIntro}
- 					width={1920}
- 					height={1080}
- 					fps={30}
- 					durationInFrames={150}
- 				/>
- 				<Composition
- 					id="SlidePushTransition"
- 					component={SlidePushTransition}
- 					width={1920}
- 					height={1080}
- 					fps={30}
- 					durationInFrames={90}
- 				/>
- 				<Composition
- 					id="MorphCircleTransition"
- 					component={MorphCircleTransition}
- 					width={1920}
- 					height={1080}
- 					fps={30}
- 					durationInFrames={90}
- 				/>
- 				<Composition
- 					id="HuaweiVsNvidia"
- 					component={HuaweiVsNvidiaMain}
- 					width={1080}
- 					height={1920}
- 					fps={60}
- 					durationInFrames={4800}
- 				/>
- 				<Composition
- 					id="drop-dots"
+				<Composition
+					id="CinematicTextIntro"
+					component={CinematicTextIntro}
+					width={1920}
+					height={1080}
+					fps={30}
+					durationInFrames={180}
+				/>
+				<Composition
+					id="MinimalFadeIntro"
+					component={MinimalFadeIntro}
+					width={1920}
+					height={1080}
+					fps={30}
+					durationInFrames={150}
+				/>
+				<Composition
+					id="SlidePushTransition"
+					component={SlidePushTransition}
+					width={1920}
+					height={1080}
+					fps={30}
+					durationInFrames={90}
+				/>
+				<Composition
+					id="MorphCircleTransition"
+					component={MorphCircleTransition}
+					width={1920}
+					height={1080}
+					fps={30}
+					durationInFrames={90}
+				/>
+				<Composition
+					id="HuaweiVsNvidia"
+					component={HuaweiVsNvidiaMain}
+					width={1080}
+					height={1920}
+					fps={60}
+					durationInFrames={4800}
+				/>
+				<Composition
+					id="drop-dots"
 					lazyComponent={() => import('./DropDots/DropDots')}
 					width={1080}
 					height={1080}
@@ -2011,6 +2013,22 @@ export const Index: React.FC = () => {
 				height={720}
 				fps={30}
 				durationInFrames={150}
+			/>
+			<Composition
+				id="vscode-coding-intro"
+				component={VSCodeCodingScene}
+				width={1920}
+				height={1080}
+				fps={30}
+				durationInFrames={360}
+			/>
+			<Composition
+				id="taipei-cards-intro"
+				component={TaipeiCardsScene}
+				width={1920}
+				height={1080}
+				fps={30}
+				durationInFrames={180}
 			/>
 		</>
 	);
